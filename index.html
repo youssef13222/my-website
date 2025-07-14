@@ -3,53 +3,48 @@
 <head>
   <meta charset="UTF-8" />
   <title>🔥 ترندات مصر - Youssef Hesham</title>
-  <!-- خط جميل -->
+  <!-- خط احترافي -->
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
-  <!-- كود AdSense -->
+
+  <!-- أيقونات -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <!-- AdSense -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3372730816421987"
     crossorigin="anonymous"></script>
-  <style>
-    * {
-      box-sizing: border-box;
-    }
 
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      margin: 0;
       font-family: 'Cairo', sans-serif;
       direction: rtl;
-      background: linear-gradient(120deg, #00c6ff, #0072ff);
+      background: linear-gradient(135deg, #00c6ff, #0072ff);
+      color: #fff;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
-      color: #fff;
-      overflow-x: hidden;
-      position: relative;
-    }
-
-    header, nav, .profile, .about, h2, .container, footer {
-      position: relative;
-      z-index: 1;
     }
 
     header {
-      background: rgba(0, 0, 0, 0.5);
-      padding: 40px 20px;
       text-align: center;
-      font-size: 36px;
+      padding: 60px 20px 20px;
+      font-size: 38px;
       font-weight: bold;
+      background: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(10px);
     }
 
     nav {
       display: flex;
-      justify-content: flex-start;
-      padding: 15px 20px;
-      background: rgba(0, 0, 0, 0.3);
+      justify-content: center;
+      gap: 30px;
+      background: rgba(0,0,0,0.3);
+      padding: 15px 0;
     }
 
     nav a {
       color: #fff;
       text-decoration: none;
-      margin-left: 20px;
       font-weight: bold;
       transition: color 0.3s;
     }
@@ -60,38 +55,63 @@
 
     .profile {
       text-align: center;
-      margin: 40px 0 20px;
+      margin: 40px auto 20px;
     }
 
     .profile img {
       width: 150px;
       border-radius: 50%;
-      box-shadow: 0 0 20px rgba(0,0,0,0.4);
+      border: 5px solid #fff;
+      box-shadow: 0 0 30px rgba(0,0,0,0.5);
+      transition: transform 0.3s;
     }
 
-    .about {
-      background: rgba(255,255,255,0.1);
-      margin: 20px auto;
-      max-width: 800px;
-      border-radius: 15px;
-      padding: 20px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 10px;
+    .profile img:hover {
+      transform: scale(1.05);
     }
 
-    .about span {
-      display: inline-block;
-      background: rgba(0,0,0,0.3);
-      padding: 10px 20px;
-      border-radius: 8px;
+    .profile h1 {
+      margin: 15px 0 5px;
+      font-size: 26px;
+    }
+
+    .profile p {
       font-size: 18px;
+      opacity: 0.8;
+    }
+
+    .cta {
+      margin: 20px;
+    }
+
+    .cta a {
+      display: inline-block;
+      background: #FFD700;
+      color: #000;
+      padding: 12px 25px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
       transition: background 0.3s;
     }
 
-    .about span:hover {
-      background: rgba(0,0,0,0.5);
+    .cta a:hover {
+      background: #fff200;
+    }
+
+    .about {
+      text-align: center;
+      margin: 20px auto;
+      max-width: 800px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 15px;
+      padding: 20px;
+      line-height: 1.8;
+    }
+
+    .ad {
+      margin: 30px auto;
+      text-align: center;
     }
 
     h2 {
@@ -102,7 +122,7 @@
 
     .container {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
       padding: 20px;
       max-width: 1200px;
@@ -113,13 +133,13 @@
       background: rgba(255, 255, 255, 0.1);
       border-radius: 15px;
       overflow: hidden;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
       transition: transform 0.3s, box-shadow 0.3s;
     }
 
     .video:hover {
       transform: translateY(-5px);
-      box-shadow: 0 12px 25px rgba(0,0,0,0.3);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.4);
     }
 
     .video img {
@@ -135,34 +155,26 @@
       font-weight: bold;
     }
 
-    .ad {
-      margin: 30px auto;
-      text-align: center;
-    }
-
     footer {
-      background: rgba(0,0,0,0.5);
       text-align: center;
+      background: rgba(0,0,0,0.5);
       padding: 20px;
       margin-top: auto;
-      font-size: 14px;
     }
 
-    body::before {
-      content: "";
-      position: fixed;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
-      background: radial-gradient(circle, rgba(255,255,255,0.05) 20%, transparent 80%);
-      animation: move 10s linear infinite;
-      z-index: 0;
+    footer .social {
+      margin-top: 10px;
     }
 
-    @keyframes move {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(360deg); }
+    footer .social a {
+      color: #fff;
+      margin: 0 10px;
+      font-size: 20px;
+      transition: color 0.3s;
+    }
+
+    footer .social a:hover {
+      color: #FFD700;
     }
   </style>
 </head>
@@ -176,28 +188,24 @@
   </nav>
 
   <div class="profile">
-    <img src="https://yt3.ggpht.com/ndHdIhwJ7vjAom5m6B9Bj-SLrtE7mGyilZoUZiQz_88uojw33V3w9gUEJQrAlrhx_8TV58HeVhU=s600-c-k-c0x00ffffff-no-rj-rp-mo" alt="قناة يوسف هشام">
+    <img src="https://yt3.ggpht.com/ndHdIhwJ7vjAom5m6B9Bj-SLrtE7mGyilZoUZiQz_88uojw33V3w9gUEJQrAlrhx_8TV58HeVhU=s600-c-k-c0x00ffffff-no-rj-rp-mo" alt="يوسف هشام">
+    <h1>يوسف هشام</h1>
+    <p>صانع محتوى 🇪🇬 | بحب الألعاب و الأنمي 💥</p>
+    <div class="cta">
+      <a href="https://www.youtube.com/@youssefhesham230" target="_blank">اشترك في قناتي</a>
+    </div>
   </div>
 
   <div class="about">
-    <span>السلام عليكم</span>
-    <span>انا شخص بسيط</span>
-    <span>اسمي يوسف هشام</span>
-    <span>من مصر</span>
-    <span>بحب الألعاب و التسليه</span>
-    <span>انمي المفضل هو دراجون بول</span>
-    <span>اسعى ان اكون مشهور</span>
-    <span>و اكون شخصيه معروفه باذن الله</span>
-    <span>هدفي اني اخليكم سعيدين و مبسوطين ان شاء الله ❤️</span>
+    <p>السلام عليكم! أنا يوسف هشام من مصر 🇪🇬 بحب أصنع محتوى ممتع عن الألعاب و الترفيه و الأنمي وخاصة دراجون بول. هدفي أخليكم دايمًا مبسوطين و مستمتعين بالمحتوى. ادعولي أوصل لحلمي وأبقى شخصية معروفة! ❤️</p>
   </div>
 
-  <!-- مكان الإعلان -->
+  <!-- إعلان AdSense -->
   <div class="ad">
     <ins class="adsbygoogle"
          style="display:block"
          data-ad-client="ca-pub-3372730816421987"
-         data-ad-slot="<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3372730816421987"
-     crossorigin="anonymous"></script>"
+         data-ad-slot="YOUR_SLOT_ID"
          data-ad-format="auto"></ins>
     <script>
          (adsbygoogle = window.adsbygoogle || []).push({});
@@ -212,6 +220,11 @@
 
   <footer>
     &copy; 2025 Youssef Hesham | جميع الحقوق محفوظة ❤️
+    <div class="social">
+      <a href="https://www.youtube.com/@youssefhesham230" target="_blank"><i class="fab fa-youtube"></i></a>
+      <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
+    </div>
   </footer>
 
   <script>
@@ -242,15 +255,6 @@
         console.error('حدث خطأ:', error);
         document.getElementById('trending').innerText = 'حدث خطأ أثناء تحميل الترندات.';
       });
-
-    // منع كليك يمين و Inspect
-    document.addEventListener('contextmenu', event => event.preventDefault());
-    document.onkeydown = function(e) {
-      if (e.keyCode == 123) { return false; } // F12
-      if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) { return false; }
-      if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) { return false; }
-      if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) { return false; }
-    };
   </script>
 
 </body>
