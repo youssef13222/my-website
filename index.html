@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <title>🔥 ترندات مصر - Youssef Hesham</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Cairo', sans-serif;
+      direction: rtl;
+      background: linear-gradient(120deg, #00c6ff, #0072ff);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      color: #fff;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    header, nav, .profile, .about, h2, .container, footer {
+      position: relative;
+      z-index: 1;
+    }
+
+    header {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 40px 20px;
+      text-align: center;
+      font-size: 36px;
+      font-weight: bold;
+      overflow: hidden;
+    }
+
+    nav {
+      display: flex;
+      justify-content: flex-start;
+      padding: 15px 20px;
+      background: rgba(0, 0, 0, 0.3);
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: bold;
+      transition: color 0.3s;
+      position: relative;
+      z-index: 2;
+    }
+
+    nav a:hover {
+      color: #FFD700;
+    }
+
+    .profile {
+      text-align: center;
+      margin: 40px 0 20px;
+    }
+
+    .profile img {
+      width: 150px;
+      border-radius: 50%;
+      box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    }
+
+    .about {
+      background: rgba(255,255,255,0.1);
+      margin: 20px auto;
+      max-width: 800px;
+      border-radius: 15px;
+      padding: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .about span {
+      display: inline-block;
+      background: rgba(0,0,0,0.3);
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-size: 18px;
+      transition: background 0.3s;
+    }
+
+    .about span:hover {
+      background: rgba(0,0,0,0.5);
+    }
+
+    h2 {
+      text-align: center;
+      margin: 40px 0 20px;
+      font-size: 28px;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .video {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .video:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.3);
+    }
+
+    .video img {
+      width: 100%;
+      display: block;
+    }
+
+    .video a {
+      display: block;
+      padding: 15px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer {
+      background: rgba(0,0,0,0.5);
+      text-align: center;
+      padding: 20px;
+      margin-top: auto;
+      font-size: 14px;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255,255,255,0.05) 20%, transparent 80%);
+      animation: move 10s linear infinite;
+      z-index: 0;
+    }
+
+    @keyframes move {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+
+  <header>🔥 الترندات في مصر - Youssef Hesham 🔥</header>
+
+  <nav>
+    <a href="index.html">الرئيسية</a>
+    <a href="https://www.youtube.com/@youssefhesham230" target="_blank">قناتي</a>
+    <a href="https://www.youtube.com/@youssefhesham230/videos" target="_blank">فيديوهاتي</a>
+  </nav>
+
+  <div class="profile">
+    <img src="https://yt3.ggpht.com/ndHdIhwJ7vjAom5m6B9Bj-SLrtE7mGyilZoUZiQz_88uojw33V3w9gUEJQrAlrhx_8TV58HeVhU=s600-c-k-c0x00ffffff-no-rj-rp-mo" alt="قناة يوسف هشام">
+  </div>
+
+  <div class="about">
+    <span>السلام عليكم</span>
+    <span>انا شخص بسيط</span>
+    <span>اسمي يوسف هشام</span>
+    <span>من مصر</span>
+    <span>بحب الألعاب و التسليه</span>
+    <span>انمي المفضل هو دراجون بول</span>
+    <span>اسعى ان اكون مشهور</span>
+    <span>و اكون شخصيه معروفه باذن الله</span>
+    <span>هدفي اني اخليكم سعيدين و مبسوطين ان شاء الله ❤️</span>
+  </div>
+
+  <h2>📈 الفيديوهات الأكثر رواجًا الآن</h2>
+
+  <div class="container" id="trending">
+    جاري تحميل الترندات...
+  </div>
+
+  <footer>
+    &copy; 2025 Youssef Hesham | جميع الحقوق محفوظة ❤️
+  </footer>
+
+  <script>
+    const apiKey = 'AIzaSyDnioP-vGXbA2MNGZnvwE2ztl2s0xcUfOM';
+    const regionCode = 'EG';
+    const maxResults = 12;
+
+    fetch(`https://www.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&regionCode=${regionCode}&maxResults=${maxResults}&key=${apiKey}`)
+      .then(response => response.json())
+      .then(data => {
+        const container = document.getElementById('trending');
+        container.innerHTML = '';
+        data.items.forEach(video => {
+          const videoId = video.id;
+          const title = video.snippet.title;
+          const thumbnail = video.snippet.thumbnails.high.url;
+
+          const videoDiv = document.createElement('div');
+          videoDiv.className = 'video';
+          videoDiv.innerHTML = `
+            <img src="${thumbnail}" alt="${title}">
+            <a href="https://www.youtube.com/watch?v=${videoId}" target="_blank">${title}</a>
+          `;
+          container.appendChild(videoDiv);
+        });
+      })
+      .catch(error => {
+        console.error('حدث خطأ:', error);
+        document.getElementById('trending').innerText = 'حدث خطأ أثناء تحميل الترندات.';
+      });
+
+    // منع كليك يمين و Inspect
+    document.addEventListener('contextmenu', event => event.preventDefault());
+    document.onkeydown = function(e) {
+      if (e.keyCode == 123) { return false; } // F12
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) { return false; }
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) { return false; }
+      if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) { return false; }
+    };
+  </script>
+
+</body>
+</html>
